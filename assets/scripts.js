@@ -1,12 +1,9 @@
-window.addEventListener('load', function () {
-	var img = document.querySelectorAll('.js-img-expand');
-   Lightense(img);
-  }, false);
-
-// Note, we are purposely binding our listener on the document object
-// so that we can intercept any anchors added in future.
-
 var cache = {};
+
+var state = {
+  "id": 0
+}
+
 function loadPage(url) {
   if (cache[url]) {
     return new Promise(function(resolve) {
@@ -47,15 +44,20 @@ function changePage() {
 }
 
 function animate(oldContent, newContent) {
-  oldContent.style.position = 'absolute';
+  
+  // oldContent.style.position = 'absolute';
 
   var fadeOut = oldContent.animate({
     opacity: [1, 0]
-  }, 500);
+  }, 100);
 
   var fadeIn = newContent.animate({
     opacity: [0, 1]
-  }, 500);
+  }, 100);
+
+  fadeOut.onfinish = function() {
+    window.scrollTo(0,0);
+  }
 
   fadeIn.onfinish = function() {
     oldContent.parentNode.removeChild(oldContent);
@@ -77,6 +79,11 @@ document.addEventListener('click', function(e) {
     console.log('default prevented')
 
     history.pushState(null, null, el.href);
+
+    console.log(el);
+    
+    // state.id = el
+
     changePage();
 
     return;
