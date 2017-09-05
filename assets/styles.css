@@ -77,3 +77,8 @@
 
 .hover-bg-wola-yellow:hover,
 .hover-bg-wola-yellow:focus { background-color: #F9C606; }
+
+.disabled {
+	cursor: default;
+	opacity: .4;
+}
