@@ -78,7 +78,46 @@
 .hover-bg-wola-yellow:hover,
 .hover-bg-wola-yellow:focus { background-color: #F9C606; }
 
+.wola-light-blue { color: #c3eefb; }
+.bg-wola-light-blue { background-color: #c3eefb; }
+.b--wola-light-blue { border-color: #c3eefb; }
+
+.hover-wola-light-blue:hover,
+.hover-wola-light-blue:focus { color: #c3eefb; }
+
+.hover-bg-wola-light-blue:hover,
+.hover-bg-wola-light-blue:focus { background-color: #c3eefb; }
+
+.facebook { color: #3B5998; }
+.bg-facebook { background-color: #3B5998; }
+.b--facebook { border-color: #3B5998; }
+
+.hover-facebook:hover,
+.hover-facebook:focus { color: #3B5998; }
+
+.hover-bg-facebook:hover,
+.hover-bg-facebook:focus { background-color: #3B5998; }
+
+.twitter { color: #00aced; }
+.bg-twitter { background-color: #00aced; }
+.b--twitter { border-color: #00aced; }
+
+.hover-twitter:hover,
+.hover-twitter:focus { color: #00aced; }
+
+.hover-bg-twitter:hover,
+.hover-bg-twitter:focus { background-color: #00aced; }
+
 .disabled {
 	cursor: default;
 	opacity: .4;
+}
+
+article a {
+	color: #00b5ef;
+	text-decoration: none;
+}
+
+article a:hover, article a:focus {
+	text-decoration: underline;
 }
