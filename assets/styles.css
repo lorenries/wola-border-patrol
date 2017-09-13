@@ -121,3 +121,31 @@ article a {
 article a:hover, article a:focus {
 	text-decoration: underline;
 }
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: -1px;
+}
+
+.is-sticky {
+	box-shadow: 0px 2px 4px 0px rgba( 0, 0, 0, 0.2 );
+}
+
+.sticky.sticky-fixed.is-sticky {
+  position: fixed;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.sticky.sticky-fixed.is-sticky:not([style*="margin-top"]) {
+  margin-top: 0 !important;
+}
+.sticky.sticky-fixed.is-sticky:not([style*="margin-bottom"]) {
+  margin-bottom: 0 !important;
+}
+
+.sticky.sticky-fixed.is-absolute{
+  position: absolute;
+}
